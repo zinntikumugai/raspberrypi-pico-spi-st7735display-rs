@@ -1,0 +1,12 @@
+services:
+  raspberrypi-pico-spi-st7735display-rs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "baker-link-env"
+    container_name: "raspberrypi-pico-spi-st7735display-rs-container"
+    volumes:
+      - "../:/raspberrypi-pico-spi-st7735display-rs"
+    working_dir: /raspberrypi-pico-spi-st7735display-rs
+    command: /bin/sh
+    tty: true

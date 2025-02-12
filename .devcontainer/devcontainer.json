@@ -1,0 +1,19 @@
+{
+    "name": "raspberrypi-pico-spi-st7735display-rs",
+    "dockerComposeFile": "../.docker/compose.yaml",
+    "service": "raspberrypi-pico-spi-st7735display-rs",
+    "workspaceFolder": "/raspberrypi-pico-spi-st7735display-rs",
+    "remoteEnv": {
+        "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "rust-lang.rust-analyzer",
+                "probe-rs.probe-rs-debugger",
+                "tamasfe.even-better-toml",
+                "fill-labs.dependi"
+            ]
+        }
+    }
+}
