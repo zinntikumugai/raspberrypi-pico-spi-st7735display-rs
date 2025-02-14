@@ -71,7 +71,7 @@ fn main() -> ! {
         embedded_hal::spi::MODE_0,
     );
 
-    // 独自の DisplaySpiDevice でラップし、st7735-lcd の要求する SpiDevice を満たす
+    // st7735-lcd の要求する SpiDevice を満たす
     let spi_device = ExclusiveDevice::new_no_delay(spi, cs).unwrap();
 
     let mut display = st7735_lcd::ST7735::new(
@@ -84,7 +84,7 @@ fn main() -> ! {
         160,    // 高さ
     );
 
-    // 必要に応じてハードリセットを行い、ディスプレイ初期化
+    // ハードリセットを行い、ディスプレイ初期化
     display.hard_reset(&mut timer).unwrap();
     display.init(&mut timer).unwrap();
 
