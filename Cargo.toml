@@ -12,12 +12,13 @@ embedded-hal = { version = "1.0.0" }
 defmt = "0.3"
 defmt-rtt = "0.4"
 panic-probe = { version = "0.3", features = ["print-defmt"] }
-rp2040-hal = { version = "0.10", features = ["rt", "critical-section-impl"] }
+rp2040-hal = { version = "0.11", features = ["rt", "critical-section-impl"] }
 rp2040-boot2 = "0.3"
 critical-section = "1.0.0"
 embedded-graphics = "0.8.1"
 tinybmp = "0.6.0"
-st7735-lcd = "=0.9.0"
+st7735-lcd = "0.10.0"
+embedded-hal-bus = "0.3.0"
 
 # cargo build/run
 [profile.dev]
